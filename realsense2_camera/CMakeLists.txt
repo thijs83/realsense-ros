@@ -18,6 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
     nodelet
     cv_bridge
     image_transport
+    image_geometry
     tf
     ddynamic_reconfigure
     diagnostic_updater

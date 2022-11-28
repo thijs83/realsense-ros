@@ -2468,11 +2468,9 @@ void BaseRealSenseNode::publishFrame(
     cam_info.header.seq = seq[stream];
     info_publisher.publish(cam_info);
 
-    if (!_emitter_on_off || (stream.first == rs2_stream::RS2_STREAM_COLOR) ||
-        (stream.first == rs2_stream::RS2_STREAM_DEPTH &&
-         f.get_frame_metadata(RS2_FRAME_METADATA_FRAME_EMITTER_MODE) == 1) ||
-        (stream.first == rs2_stream::RS2_STREAM_INFRARED &&
-         f.get_frame_metadata(RS2_FRAME_METADATA_FRAME_EMITTER_MODE) == 0))
+    if ((stream.first == rs2_stream::RS2_STREAM_COLOR) ||
+        (stream.first == rs2_stream::RS2_STREAM_DEPTH  ||
+        (stream.first == rs2_stream::RS2_STREAM_INFRARED )
     {
       sensor_msgs::ImagePtr img;
       img = cv_bridge::CvImage(std_msgs::Header(), encoding.at(stream.first), image).toImageMsg();

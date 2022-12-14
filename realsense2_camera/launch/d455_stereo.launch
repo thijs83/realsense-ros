@@ -11,9 +11,11 @@
   <arg name="output"              default="screen"/>
   <arg name="respawn"             default="false"/>
 
+
   <arg name="depth_width"         default="640"/>
   <arg name="depth_height"        default="480"/>
   <arg name="enable_depth"        default="false"/> 
+
 
   <arg name="infra_width"         default="848"/>
   <arg name="infra_height"        default="480"/>
@@ -35,6 +37,7 @@
   <!--Emitter_on_off can only be used when realsense lib is build with RSUSB_BACKEND or the kernel needs to be patched when possible-->
   <arg name="emitter_on_off"        default="false"/> <!--If emitter_on_off=true, depth_fps must equal to infra_fps, and the actual output frame rate will be halved.-->
   <arg name="enable_sync"               default="true"/>
+
   <arg name="align_depth"               default="true"/>
 
   <arg name="publish_tf"                default="true"/>
@@ -51,6 +54,7 @@
   <arg name="clip_distance"             default="-2"/>
   <arg name="linear_accel_cov"          default="0.01"/>
   <arg name="initial_reset"             default="true"/>
+
   <arg name="unite_imu_method"          default="linear_interpolation"/>
   <arg name="topic_odom_in"             default="odom_in"/>
   <arg name="calib_odom_file"           default=""/>
@@ -75,8 +79,10 @@
       <arg name="pointcloud_texture_index"  value="$(arg pointcloud_texture_index)"/>
       <arg name="enable_sync"              value="$(arg enable_sync)"/>
       <arg name="align_depth"              value="$(arg align_depth)"/>
+
       <arg name="emitter_on_off"           value="$(arg emitter_on_off)"/>
       <arg name="enable_emitter"           value="$(arg enable_emitter)"/>
+
 
       <arg name="depth_width"              value="$(arg depth_width)"/>
       <arg name="depth_height"             value="$(arg depth_height)"/>
@@ -97,6 +103,7 @@
       <arg name="color_fps"                value="$(arg color_fps)"/>
       <arg name="gyro_fps"                 value="$(arg gyro_fps)"/>
       <arg name="accel_fps"                value="$(arg accel_fps)"/>
+
       <arg name="enable_gyro"              value="$(arg enable_imu)"/>
       <arg name="enable_accel"             value="$(arg enable_imu)"/>
 

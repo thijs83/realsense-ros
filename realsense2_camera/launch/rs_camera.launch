@@ -25,6 +25,7 @@
   <arg name="infra_fps"           default="30"/> <!--If emitter_on_off=true, depth_fps must equal to infra_fps, and the actual output frame rate will be halved.-->
   <arg name="color_fps"           default="30"/>
   <arg name="gyro_fps"            default="200"/>
+
   <arg name="accel_fps"           default="200"/>
   <arg name="enable_imu"          default="true"/>
 

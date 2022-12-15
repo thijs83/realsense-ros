@@ -2484,20 +2484,8 @@ void BaseRealSenseNode::publishFrame(
       img->header.stamp = t;
       img->header.seq = seq[stream];
       image_publisher.first.publish(img);
-    } /*else if (_emitter_on_off)
-    {
-        sensor_msgs::ImagePtr img;
-        img = cv_bridge::CvImage(std_msgs::Header(), encoding.at(stream.first), image).toImageMsg();
-        img->width = width;
-        img->height = height;
-        img->is_bigendian = false;
-        img->step = width * bpp;
-        img->header.frame_id = cam_info.header.frame_id;
-        img->header.stamp = t;
-        img->header.seq = seq[stream];
+    }
 
-        image_publisher.first.publish(img);
-    }*/
     image_publisher.second->update();
 
     /*  */

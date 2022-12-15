@@ -25,7 +25,6 @@
   <arg name="infra_fps"           default="30"/> <!--If emitter_on_off=true, depth_fps must equal to infra_fps, and the actual output frame rate will be halved.-->
   <arg name="color_fps"           default="30"/>
   <arg name="gyro_fps"            default="200"/>
-
   <arg name="accel_fps"           default="200"/>
   <arg name="enable_imu"          default="true"/>
 
@@ -36,8 +35,8 @@
   <arg name="enable_emitter"        default="false"/> <!--If enable_emitter=off, then emitter_on_off should also be off -->
   <!--Emitter_on_off can only be used when realsense lib is build with RSUSB_BACKEND or the kernel needs to be patched when possible-->
   <arg name="emitter_on_off"        default="false"/> <!--If emitter_on_off=true, depth_fps must equal to infra_fps, and the actual output frame rate will be halved.-->
-  <arg name="enable_sync"           default="false"/>
-  <arg name="align_depth"           default="false"/>
+  <arg name="enable_sync"           default="true"/>
+  <arg name="align_depth"           default="true"/>
 
   <arg name="filters"               default=""/>
   <arg name="clip_distance"         default="-2"/>
